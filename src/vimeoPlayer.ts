@@ -22,19 +22,13 @@ export const vimeoPlayer = function () {
     const player = new Player(playerEl, options);
 
     instance.addEventListener('mouseenter', () => {
-      player.getPaused().then((paused) => {
-        if (!paused) return;
-        playerEl.classList.toggle('is-playing');
-        player.play();
-      });
+      playerEl.classList.toggle('is-playing');
+      player.play();
     });
 
     instance.addEventListener('mouseleave', () => {
-      player.getPaused().then((paused) => {
-        if (paused) return;
-        playerEl.classList.toggle('is-playing');
-        player.pause();
-      });
+      playerEl.classList.toggle('is-playing');
+      player.pause();
     });
   });
 };

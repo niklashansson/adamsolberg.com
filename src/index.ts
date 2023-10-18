@@ -1,7 +1,8 @@
-import { greetUser } from '$utils/greet';
+import { Vimeo } from './vimeo';
 
 window.Webflow ||= [];
+import { vimeoPlayer } from './vimeoPlayer';
+
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  vimeoPlayer();
 });
